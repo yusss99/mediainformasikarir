@@ -332,6 +332,12 @@ function trivLeavePage() {
 			if( window.closed ) trivPageExited = true;
         }
     }
+try {
+	window.open('', '_self');
+	window.close();
+} catch(e) {
+
+	window.location.href = "about:blank";
 }
 
 function trivPrevPage() {
